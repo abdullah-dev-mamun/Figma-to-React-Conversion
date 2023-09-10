@@ -7,12 +7,11 @@ const Menus = [
     id: 1,
     menuName: "Dashboard",
     img: "/images/menu-icon.svg",
-    path: "/",
     subMenu: [
       {
         id: 10,
         menuName: "Menu Layout",
-        path: "",
+        path: "/menu-layout",
       },
       {
         id: 11,
@@ -40,7 +39,6 @@ const Menus = [
     id: 2,
     menuName: "authentication pages",
     img: "/images/menu-icon.svg",
-    path: "/",
     subMenu: [
       {
         id: 20,
@@ -105,7 +103,7 @@ const SideNav = () => {
                         <li key={subIndex + index} className="mb-5 last:mb-0">
                           <Link
                             className="text-grayishCyan hover:text-brand-primary active:hover:text-brand-primary transition-all duration-200 ease-in cursor-pointer"
-                            href={path}
+                            href="/menu-layout"
                           >
                             {menuName}
                           </Link>

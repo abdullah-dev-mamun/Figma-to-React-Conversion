@@ -48,7 +48,7 @@ const HotFoodMenu = () => {
           {HopMenutableData.map((items, index) => {
             const { data, price, color } = items;
             return (
-              <tr className="border-b-[1px] border-dark-secondary">
+              <tr key={index} className="border-b-[1px] border-dark-secondary">
                 <td className="p-6">{data}</td>
                 <td className="p-6 text-center mx-auto  flex justify-center">
                   <div
