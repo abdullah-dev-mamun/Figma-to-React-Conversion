@@ -79,14 +79,6 @@ const productCardData = [
 const MenuLayout = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
   return (
     <>
       <div className="w-full h-8 bg-dark-primary py-8 px-6 flex justify-between items-center">
