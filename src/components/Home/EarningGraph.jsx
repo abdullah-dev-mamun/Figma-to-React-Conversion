@@ -1,11 +1,8 @@
 import React from "react";
+import GraphChart from "./GraphChart";
 
 const EarningGraph = () => {
-  return (
-    <div>
-      <img src="/images/earning-graph.jpg" alt="" />
-    </div>
-  );
+  return <GraphChart />;
 };
 
 export default EarningGraph;
