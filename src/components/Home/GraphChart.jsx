@@ -16,8 +16,22 @@ const GraphChart = () => {
     ],
     options: {
       chart: {
+        foreColor: "#ffffff",
         height: 350,
         type: "area",
+        tootlbar: {
+          show: false,
+          offsetX: 0,
+          offsetY: 0,
+          tools: {
+            download: false,
+            selection: false,
+            zoom: false,
+            zoomin: false,
+            zoomout: false,
+            pan: false,
+          },
+        },
       },
       dataLabels: {
         enabled: false,
@@ -41,6 +55,7 @@ const GraphChart = () => {
 
       xaxis: {
         type: "datetime",
+        // color: "#fff",
         categories: [
           "2011",
           "2012",

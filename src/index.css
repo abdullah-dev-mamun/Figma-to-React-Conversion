@@ -53,3 +53,6 @@
   background-color: var(--darkLight);
   border-radius: 100%;
 }
+.apexcharts-menu-item.exportCSV {
+  display: none;
+}
