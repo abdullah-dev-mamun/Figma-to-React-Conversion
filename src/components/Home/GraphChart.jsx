@@ -19,19 +19,6 @@ const GraphChart = () => {
         foreColor: "#ffffff",
         height: 350,
         type: "area",
-        tootlbar: {
-          show: false,
-          offsetX: 0,
-          offsetY: 0,
-          tools: {
-            download: false,
-            selection: false,
-            zoom: false,
-            zoomin: false,
-            zoomout: false,
-            pan: false,
-          },
-        },
       },
       dataLabels: {
         enabled: false,
@@ -40,22 +27,13 @@ const GraphChart = () => {
         curve: "smooth",
       },
       markers: {
-        colors: ["#F44336", "#E91E63", "#9C27B0"],
+        // colors: ["#F44336", "#E91E63", "#9C27B0"],
       },
 
       colors: ["#f75757", "#fa9441"],
-      theme: {
-        monochrome: {
-          enabled: true,
-          color: "#F44336",
-          shadeTo: "light",
-          shadeIntensity: 0.65,
-        },
-      },
 
       xaxis: {
         type: "datetime",
-        // color: "#fff",
         categories: [
           "2011",
           "2012",
