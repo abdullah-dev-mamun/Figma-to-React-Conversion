@@ -43,7 +43,7 @@ const HotFoodMenu = () => {
           <span></span>
         </button>
       </div>
-      <table className="bg-dark-primary w-full mt-4">
+      <table className="bg-dark-primary w-full mt-4 text-sm">
         <tbody>
           {HopMenutableData.map((items, index) => {
             const { data, price, color } = items;

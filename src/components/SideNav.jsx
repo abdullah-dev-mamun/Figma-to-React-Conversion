@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import Breadcrumb from "./Breadcrumb";
-import MainContent from "./MainContent";
 const Menus = [
   {
     id: 1,
@@ -16,22 +14,22 @@ const Menus = [
       {
         id: 11,
         menuName: "Order List",
-        path: "",
+        path: "/",
       },
       {
         id: 12,
         menuName: "Chef Page",
-        path: "",
+        path: "/",
       },
       {
         id: 13,
         menuName: "Customer Reviews",
-        path: "",
+        path: "/",
       },
       {
         id: 14,
         menuName: "Upload Menu",
-        path: "",
+        path: "/",
       },
     ],
   },
@@ -43,22 +41,22 @@ const Menus = [
       {
         id: 20,
         menuName: "Login",
-        path: "",
+        path: "/",
       },
       {
         id: 21,
         menuName: "Register Now",
-        path: "",
+        path: "/",
       },
       {
         id: 22,
         menuName: "Lock Screen",
-        path: "",
+        path: "/",
       },
       {
         id: 23,
         menuName: "Recover Password",
-        path: "",
+        path: "/",
       },
     ],
   },
@@ -103,7 +101,7 @@ const SideNav = () => {
                         <li key={subIndex + index} className="mb-5 last:mb-0">
                           <Link
                             className="text-grayishCyan hover:text-brand-primary active:hover:text-brand-primary transition-all duration-200 ease-in cursor-pointer"
-                            href="/menu-layout"
+                            to={path}
                           >
                             {menuName}
                           </Link>
@@ -113,7 +111,7 @@ const SideNav = () => {
                   </ul>
                 </>
               ) : (
-                <Link className="" href={path}>
+                <Link className="" to={path}>
                   <div className="p-3 flex items-center w-full">
                     <img src={img} alt="Menu icon" />
                     <p className="ml-2 text-brand-primary">{menuName}</p>

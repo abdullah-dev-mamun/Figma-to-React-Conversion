@@ -86,9 +86,12 @@ const MenuLayout = () => {
 
       <section className="p-6 mt-4">
         <div className="w-full h-8 bg-dark-primary p-10 pr-20 flex justify-between items-center mb-6 relative">
-          <div className="menu_add absolute w-12 h-12 bg-brand-primary font-bold text-4xl rounded-full flex justify-center items-center -top-6 right-4">
+          <button
+            type="button"
+            className="menu_add absolute w-12 h-12 bg-brand-primary font-bold text-4xl rounded-full flex justify-center items-center -top-6 right-4"
+          >
             +
-          </div>
+          </button>
           <p className="text-brand-primary">Menu Item 1</p>
           <div className="flex gap-4">
             <img src="/images/menu-icon.svg" alt="" />

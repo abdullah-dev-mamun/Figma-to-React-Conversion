@@ -6,7 +6,7 @@ const TopHeader = () => {
     <>
       <div className="bg-dark-primary w-full h-20 text-white flex mb-[10px]">
         <div className="w-[15%] md:w-[30%] lg:w-[20%] flex justify-between items-center p-3 border-r border-dark-secondary">
-          <Link className="hidden sm:block" href="/">
+          <Link className="hidden sm:block" to="/">
             <img
               className="w-24"
               src="/images/brand-logo.svg"
@@ -41,7 +41,7 @@ const TopHeader = () => {
         </div>
         {/* right side */}
         <div className="w-[85%] md:w-[70%] lg:w-[80%] flex justify-between items-center p-3">
-          <div className="p-2 relative flex items-center rounded-full bg-black overflow-hidden">
+          <div className="p-2 relative flex items-center rounded-full bg-dark-tertiary overflow-hidden">
             <input
               className="peer h-full w-full outline-none text-sm text-white pl-3 pr-2 bg-transparent"
               type="text"

@@ -1,4 +1,56 @@
 import React from "react";
+const TableBodyData = [
+  {
+    id: 1,
+    customerName: "Inverness McKenzie",
+    productId: "746815",
+    product: "Plain Pizza",
+    quantity: "06",
+    price: "44.75",
+    status: "Paid",
+    btnColor: "bg-success",
+  },
+  {
+    id: 2,
+    customerName: "Inverness McKenzie",
+    productId: "746815",
+    product: "Plain Pizza",
+    quantity: "06",
+    price: "44.75",
+    status: "Paid",
+    btnColor: "bg-success",
+  },
+  {
+    id: 3,
+    customerName: "Inverness McKenzie",
+    productId: "746815",
+    product: "Plain Pizza",
+    quantity: "06",
+    price: "44.75",
+    status: "Cancel",
+    btnColor: "bg-brand-primary",
+  },
+  {
+    id: 4,
+    customerName: "Inverness McKenzie",
+    productId: "746815",
+    product: "Plain Pizza",
+    quantity: "06",
+    price: "44.75",
+    status: "Pending",
+    btnColor: "bg-brand-tertiary",
+  },
+  {
+    id: 5,
+    customerName: "Inverness McKenzie",
+    productId: "746815",
+    product: "Plain Pizza",
+    quantity: "06",
+    price: "44.75",
+    status: "Pending",
+    btnColor: "bg-brand-tertiary",
+  },
+];
 
 const OrderList = () => {
   return (
@@ -12,7 +64,7 @@ const OrderList = () => {
         </button>
       </div>
       <div className="w-full overflow-x-auto scrollbar mb-8">
-        <table className="w-full">
+        <table className="w-full text-sm">
           <thead>
             <tr>
               <th className="px-6 py-3 text-left font-semibold">Customer</th>
@@ -24,62 +76,34 @@ const OrderList = () => {
             </tr>
           </thead>
           <tbody className="mb-12">
-            <tr className="bg-dark-primary">
-              <td className="p-6">Inverness McKenzie</td>
-              <td className="p-6">#746815</td>
-              <td className="p-6">Plain Pizza</td>
-              <td className="p-6">06</td>
-              <td className="p-6 text-success">$44.75</td>
-              <td className="p-6 text-center">
-                <div className="bg-success px-3 py-1 rounded-full">Paid</div>
-              </td>
-            </tr>
-            <tr className="bg-dark-primary">
-              <td className="p-6">Inverness McKenzie</td>
-              <td className="p-6">#746815</td>
-              <td className="p-6">Plain Pizza</td>
-              <td className="p-6">06</td>
-              <td className="p-6 text-success">$44.75</td>
-              <td className="p-6 text-center">
-                <div className="bg-success px-3 py-1 rounded-full">Paid</div>
-              </td>
-            </tr>
-            <tr className="bg-dark-primary">
-              <td className="p-6">Inverness McKenzie</td>
-              <td className="p-6">#746815</td>
-              <td className="p-6">Plain Pizza</td>
-              <td className="p-6">06</td>
-              <td className="p-6 text-brand-primary">$44.75</td>
-              <td className="p-6 text-center">
-                <div className="bg-brand-primary px-3 py-1 rounded-full">
-                  Cancle
-                </div>
-              </td>
-            </tr>
-            <tr className="bg-dark-primary">
-              <td className="p-6">Inverness McKenzie</td>
-              <td className="p-6">#746815</td>
-              <td className="p-6">Plain Pizza</td>
-              <td className="p-6">06</td>
-              <td className="p-6 text-brand-primary">$44.75</td>
-              <td className="p-6 text-center">
-                <div className="bg-brand-primary px-3 py-1 rounded-full">
-                  Cancle
-                </div>
-              </td>
-            </tr>
-            <tr className="bg-dark-primary">
-              <td className="p-6">Inverness McKenzie</td>
-              <td className="p-6">#746815</td>
-              <td className="p-6">Plain Pizza</td>
-              <td className="p-6">06</td>
-              <td className="p-6 text-brand-tertiary">$44.75</td>
-              <td className="p-6 text-center">
-                <div className="bg-brand-tertiary px-3 py-1 rounded-full">
-                  Pending
-                </div>
-              </td>
-            </tr>
+            {TableBodyData.map((items, i) => {
+              const {
+                customerName,
+                productId,
+                product,
+                quantity,
+                price,
+                status,
+                btnColor,
+              } = items;
+              return (
+                <tr
+                  key={i}
+                  className="bg-dark-primary border-b-[8px] border-dark-tertiary"
+                >
+                  <td className="p-6">{customerName}</td>
+                  <td className="p-6">#{productId}</td>
+                  <td className="p-6">{product}</td>
+                  <td className="p-6">{quantity}</td>
+                  <td className="p-6 text-success">${price}</td>
+                  <td className="p-6 text-center">
+                    <div className={`px-3 py-1 rounded-full ${btnColor}`}>
+                      {status}
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

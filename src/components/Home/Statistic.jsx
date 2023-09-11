@@ -56,10 +56,10 @@ const Statistic = () => {
             <div key={index} className="bg-dark-primary flex  items-center p-8">
               <img src={img} alt="" />
               <div className="ml-4">
-                <h2 style={{ color: color }} className="text-3xl font-bold">
+                <h2 style={{ color: color }} className="text-2xl font-bold">
                   {title}
                 </h2>
-                <p className="">{des}</p>
+                <p className="tex-lg">{des}</p>
               </div>
             </div>
           );
