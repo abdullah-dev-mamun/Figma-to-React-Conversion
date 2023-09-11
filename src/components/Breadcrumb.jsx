@@ -15,7 +15,6 @@ const BreadcrumbItems = [
 ];
 
 const CheckHome = ({ item, isHome = false }) => {
-  console.log("location", item);
   return (
     <>
       <a

@@ -65,6 +65,7 @@ const GraphChart = () => {
 
   return (
     <div>
+      <p>Earning Graph</p>
       <ReactApexChart
         options={state.options}
         series={state.series}
