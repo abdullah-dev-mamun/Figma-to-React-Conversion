@@ -23,6 +23,10 @@ const GraphChart = () => {
       dataLabels: {
         enabled: false,
       },
+      tooltip: {
+        theme: "dark",
+      },
+
       stroke: {
         curve: "smooth",
       },
